@@ -175,7 +175,6 @@ function App() {
                 <Profile />
               </AuthRequiredRoute>
             } />
-            <Route path="/career" element={<Career />} />
             <Route path="/career/*" element={<Career />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/carrer-privacy-policy' element={<CareersPrivacyPolicy />} />

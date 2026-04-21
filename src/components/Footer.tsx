@@ -100,7 +100,7 @@ export default function Footer() {
                   Benefits
                 </a>
                 <a 
-                  href="/careers" 
+                  href="/career" 
                   className="py-2 text-gray-300 hover:text-white text-base font-medium flex items-center justify-between group block"
                 >
                   Careers

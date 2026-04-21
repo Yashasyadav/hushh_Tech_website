@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Routes, Route, useLocation } from 'react-router-dom';
+import { Link, Navigate, Routes, Route } from 'react-router-dom';
 import { careers } from '../../data/career';
 import JobDetails from './JobDetails';
 import './Career.css';
@@ -260,16 +260,11 @@ const CareerList = () => {
 };
 
 const Career = () => {
-  const location = useLocation();
-  
-  // Only show the career list on the main career page
-  if (location.pathname === '/career') {
-    return <CareerList />;
-  }
-
   return (
     <Routes>
-      <Route path="/:jobId" element={<JobDetails />} />
+      <Route index element={<CareerList />} />
+      <Route path=":jobId" element={<JobDetails />} />
+      <Route path="*" element={<Navigate to="/career" replace />} />
     </Routes>
   );
 };
