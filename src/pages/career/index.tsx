@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link, Navigate, Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import { careers } from '../../data/career';
 import JobDetails from './JobDetails';
+import NotFoundPage from '../NotFoundPage';
 import './Career.css';
 import { 
   Container, 
@@ -264,7 +265,7 @@ const Career = () => {
     <Routes>
       <Route index element={<CareerList />} />
       <Route path=":jobId" element={<JobDetails />} />
-      <Route path="*" element={<Navigate to="/career" replace />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

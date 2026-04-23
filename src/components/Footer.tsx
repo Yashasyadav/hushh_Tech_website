@@ -3,6 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaGlobe, FaAt, FaRss, FaPhone } from "react-icons/fa";
 import HushhLogo from "./images/Hushhogo.png";
 import { useAuthSession } from "../auth/AuthSessionProvider";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { status } = useAuthSession();
@@ -99,12 +100,12 @@ export default function Footer() {
                 >
                   Benefits
                 </a>
-                <a 
-                  href="/career" 
+                <Link 
+                  to="/career" 
                   className="py-2 text-gray-300 hover:text-white text-base font-medium flex items-center justify-between group block"
                 >
                   Careers
-                </a>
+                </Link>
               </div>
               <div className="space-y-0">
                 <a 
